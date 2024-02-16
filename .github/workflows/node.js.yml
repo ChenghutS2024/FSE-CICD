@@ -27,4 +27,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run coveragw
+    - run: npm run coverage
+    - name: deploy to cloud
+      run: curl "https://api.render.com/deploy/srv-cn7pra7sc6pc73cbg180?key=NF3XuNiUEfE"
